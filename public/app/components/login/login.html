@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="alert alert-success" ng-if="message">{{message}}</div>
+    <div class="alert alert-danger" ng-if="error">{{error}}</div>
+    <div class="panel panel-default">
+        <div class="panel-body">
+           
+           <form ng-submit="auth()">
+               <legend>Auth Info</legend>
+           
+               <div class="form-group">
+                   <label for="">Email:</label>
+                   <input type="email" ng-model="user.email"/>
+               </div>
+               
+               <div class="form-group">
+                   <label for="">Email:</label>
+                   <input type="password" ng-model="user.password"/>
+               </div>
+           
+               <button type="submit" ng-click="auth = login" class="btn btn-primary">Login</button>
+               <button type="submit" ng-click="auth = register" class="btn btn-primary">Register</button>
+           </form>
+        </div>
+    </div>
+</div>
